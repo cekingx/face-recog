@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Verifikasi Wajah</string>
+    <string name="contentDescription">Gambar bawah</string>
+    <string name="cek">Cek</string>
+    <string name="no_image">No Image</string>
+    <string name="add_image">Add Image</string>
+    <string name="nik_label">NIK</string>
+    <string name="nama_label">Nama</string>
+    <string name="ttl_label">TTL</string>
+    <string name="jenis_kelamin_label">Jenis Kelamin</string>
+    <string name="gol_darah_label">Gol. Darah</string>
+    <string name="alamat_label">Alamat</string>
+    <string name="agama_label">Agama</string>
+    <string name="status_perkawinan_label">Status Kawin</string>
+    <string name="pekerjaan_label">Pekerjaan</string>
+    <string name="kewarganegaraan_label">Kewarganegaraan</string>
+    <string name="riwayat_tinggal_label">Riwayat Tinggal</string>
+    <string name="confidence_label">Kemiripan</string>
+</resources>
