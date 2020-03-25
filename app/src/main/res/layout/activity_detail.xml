@@ -6,249 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/riwayat_tinggal_label"
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/response_bg" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:id="@+id/nama_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="serif"
-                android:text="@string/nama_label"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/nik_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/nik_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nama_value" />
-
-            <TextView
-                android:id="@+id/nik_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="150dp"
-                android:text="@string/nik_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/nik_label" />
-
-            <TextView
-                android:id="@+id/ttl_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/ttl_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nik_label" />
-
-            <TextView
-                android:id="@+id/ttl_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ttl_label"
-                app:layout_constraintStart_toStartOf="@+id/nik_value"
-                app:layout_constraintTop_toTopOf="@+id/ttl_label" />
-
-            <TextView
-                android:id="@+id/jenis_kelamin_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/jenis_kelamin_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ttl_label" />
-
-            <TextView
-                android:id="@+id/jenis_kelamin_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/jenis_kelamin_label"
-                app:layout_constraintStart_toStartOf="@+id/ttl_value"
-                app:layout_constraintTop_toTopOf="@+id/jenis_kelamin_label" />
-
-            <TextView
-                android:id="@+id/gol_darah_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/gol_darah_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/jenis_kelamin_label" />
-
-            <TextView
-                android:id="@+id/gol_darah_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/gol_darah_label"
-                app:layout_constraintStart_toStartOf="@+id/jenis_kelamin_value"
-                app:layout_constraintTop_toTopOf="@+id/gol_darah_label" />
-
-            <TextView
-                android:id="@+id/agama_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/agama_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gol_darah_label" />
-
-            <TextView
-                android:id="@+id/agama_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/agama_label"
-                app:layout_constraintStart_toStartOf="@+id/gol_darah_value"
-                app:layout_constraintTop_toTopOf="@+id/agama_label" />
-
-            <TextView
-                android:id="@+id/status_perkawinan_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/status_perkawinan_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/agama_label" />
-
-            <TextView
-                android:id="@+id/status_perkawinan_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_perkawinan_label"
-                app:layout_constraintStart_toStartOf="@+id/agama_value"
-                app:layout_constraintTop_toTopOf="@+id/status_perkawinan_label" />
-
-            <TextView
-                android:id="@+id/pekerjaan_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/pekerjaan_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/status_perkawinan_label" />
-
-            <TextView
-                android:id="@+id/pekerjaan_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pekerjaan_label"
-                app:layout_constraintStart_toStartOf="@+id/status_perkawinan_value"
-                app:layout_constraintTop_toTopOf="@+id/pekerjaan_label" />
-
-            <TextView
-                android:id="@+id/kewarganegaraan_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/kewarganegaraan_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pekerjaan_label" />
-
-            <TextView
-                android:id="@+id/kewarganegaraan_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kewarganegaraan_label"
-                app:layout_constraintStart_toStartOf="@+id/pekerjaan_value"
-                app:layout_constraintTop_toTopOf="@+id/kewarganegaraan_label" />
-
-            <TextView
-                android:id="@+id/alamat_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/alamat_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/confidence_label" />
-
-            <TextView
-                android:id="@+id/alamat_value"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/alamat_label"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/confidence_value"
-                app:layout_constraintTop_toTopOf="@+id/alamat_label" />
-
-            <TextView
-                android:id="@+id/confidence_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/confidence_label"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/kewarganegaraan_label" />
-
-            <TextView
-                android:id="@+id/confidence_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/confidence_label"
-                app:layout_constraintStart_toStartOf="@+id/kewarganegaraan_value"
-                app:layout_constraintTop_toTopOf="@+id/confidence_label" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:translationY="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/placeholder" />
 
     <TextView
-        android:id="@+id/riwayat_tinggal_label"
+        android:id="@+id/nik_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:fontFamily="serif"
-        android:text="@string/riwayat_tinggal_label"
+        android:text="5104031307990001"
+        android:textColor="@color/putih"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/nama_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="I Dewa Gede Dirga Yasa"
+        android:textColor="@color/putih"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/mRecyclerView"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nik_value"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/skor_bg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background"
+        app:srcCompat="@drawable/response_skor_bg" />
+
+    <TextView
+        android:id="@+id/skor_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90.1"
+        android:textColor="@color/putih"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/skor_bg"
+        app:layout_constraintEnd_toEndOf="@+id/skor_bg"
+        app:layout_constraintStart_toStartOf="@+id/skor_bg"
+        app:layout_constraintTop_toTopOf="@+id/skor_bg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
