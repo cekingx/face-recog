@@ -55,7 +55,7 @@
         android:id="@+id/skor_bg"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background"
@@ -72,5 +72,27 @@
         app:layout_constraintEnd_toEndOf="@+id/skor_bg"
         app:layout_constraintStart_toStartOf="@+id/skor_bg"
         app:layout_constraintTop_toTopOf="@+id/skor_bg" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:itemBackground="@color/putih"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skor_bg"
+        app:menu="@menu/bottom_nav" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btm_nav">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
