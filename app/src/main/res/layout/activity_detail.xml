@@ -16,15 +16,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/response_bg" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/foto"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:translationY="80dp"
+        android:src="@drawable/placeholder"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/placeholder" />
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/putih"/>
 
     <TextView
         android:id="@+id/nik_value"
@@ -53,7 +55,7 @@
 
     <ImageView
         android:id="@+id/skor_bg"
-        android:layout_width="50dp"
+        android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
@@ -62,7 +64,7 @@
         app:srcCompat="@drawable/response_skor_bg" />
 
     <TextView
-        android:id="@+id/skor_value"
+        android:id="@+id/confidence_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="90.1"

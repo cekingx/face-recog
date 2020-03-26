@@ -31,7 +31,8 @@ class NikInputActivity : AppCompatActivity(), UploadRequestBody.UploadCallback {
         }
 
         verifikasi_button.setOnClickListener {
-            startActivity(intent)
+//            startActivity(intent)
+            uploadImage()
         }
 
     }
@@ -96,6 +97,7 @@ class NikInputActivity : AppCompatActivity(), UploadRequestBody.UploadCallback {
                     progress_bar.progress = 100
                     val intent = Intent(this@NikInputActivity, DetailActivity::class.java).apply {
                         putExtra("data", it)
+                        putExtra("image_uri", selectedImageUri)
                     }
 
                     startActivity(intent)

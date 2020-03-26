@@ -30,7 +30,7 @@
 
                 <TextView
                     android:id="@+id/ttl_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/ttl_label" />
@@ -40,7 +40,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/ttl_label" />
+                    android:text="@string/ttl_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -51,7 +52,7 @@
 
                 <TextView
                     android:id="@+id/jenis_kelamin_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/jenis_kelamin_label" />
@@ -61,7 +62,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/jenis_kelamin_label" />
+                    android:text="@string/jenis_kelamin_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -72,7 +74,7 @@
 
                 <TextView
                     android:id="@+id/gol_darah_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gol_darah_label" />
@@ -82,7 +84,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/gol_darah_label" />
+                    android:text="@string/gol_darah_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,7 +96,7 @@
 
                 <TextView
                     android:id="@+id/agama_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/agama_label" />
@@ -103,7 +106,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/agama_label" />
+                    android:text="@string/agama_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -114,7 +118,7 @@
 
                 <TextView
                     android:id="@+id/status_perkawinan_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/status_perkawinan_label" />
@@ -124,7 +128,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/status_perkawinan_label" />
+                    android:text="@string/status_perkawinan_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -135,7 +140,7 @@
 
                 <TextView
                     android:id="@+id/pekerjaan_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/pekerjaan_label" />
@@ -145,7 +150,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/pekerjaan_label" />
+                    android:text="@string/pekerjaan_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -156,7 +162,7 @@
 
                 <TextView
                     android:id="@+id/kewarganegaraan_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/kewarganegaraan_label" />
@@ -166,7 +172,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/kewarganegaraan_label" />
+                    android:text="@string/kewarganegaraan_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -177,7 +184,7 @@
 
                 <TextView
                     android:id="@+id/alamat_label"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/alamat_label" />
@@ -187,8 +194,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/alamat_label" />
+                    android:text="@string/alamat_label"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

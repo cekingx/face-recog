@@ -1,5 +1,6 @@
 package xyz.cekingx.facerecog
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentTransaction
@@ -21,7 +22,10 @@ class DetailActivity : AppCompatActivity() {
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.btm_nav)
 
-        detailFragment = DetailFragment()
+        val data = intent.getParcelableExtra<UploadResponse>("data")
+        val image_uri = intent.getParcelableExtra<Uri?>("image_uri")
+
+        detailFragment = DetailFragment.detailData(data)
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frame_layout, detailFragment)
@@ -31,7 +35,7 @@ class DetailActivity : AppCompatActivity() {
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.detail_icon -> {
-                    detailFragment = DetailFragment()
+                    detailFragment = DetailFragment.detailData(data)
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.frame_layout, detailFragment)
@@ -51,5 +55,9 @@ class DetailActivity : AppCompatActivity() {
             true
         }
 
+        nama_value.text = data.nama
+        nik_value.text = data.nik
+        confidence_value.text = data.confidence
+        foto.setImageURI(image_uri)
     }
 }
