@@ -1,15 +1,13 @@
 package xyz.cekingx.facerecog.fragment
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import kotlinx.android.synthetic.main.fragment_detail.*
 import xyz.cekingx.facerecog.R
-import xyz.cekingx.facerecog.UploadResponse
+import xyz.cekingx.facerecog.Entity.UploadResponse
 import java.text.SimpleDateFormat
 
 /**

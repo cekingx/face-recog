@@ -1,4 +1,4 @@
-package xyz.cekingx.facerecog
+package xyz.cekingx.facerecog.Old
 
 //import android.app.Activity
 //import android.content.Intent
@@ -69,7 +69,7 @@ package xyz.cekingx.facerecog
 //        val outputStream = FileOutputStream(file)
 //        inputStream.copyTo(outputStream)
 //
-//        val nik = nik_input.text.toString();
+//        val nik = [del]nik_input.text.toString();
 //
 //        progress_bar.progress = 0
 //        val body = UploadRequestBody(file, "image", this)

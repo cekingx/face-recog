@@ -1,4 +1,4 @@
-package xyz.cekingx.facerecog
+package xyz.cekingx.facerecog.Old
 
 //import android.os.Bundle
 //import androidx.appcompat.app.AppCompatActivity

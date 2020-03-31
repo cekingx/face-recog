@@ -12,4 +12,20 @@
 
     <color name="putih">#FFFFFF</color>
     <color name="abu">#B7B7B7</color>
+
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+    <color name="red_300">#E57373</color>
+    <color name="red_400">#EF5350</color>
+    <color name="background">#211D44</color>
+    <color name="tosca">#48B9AC</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="tabindicator">#D2FFFC</color>
+    <color name="tabbackground">#81A4A1</color>
+    <color name="ungu">#47436A</color>
+    <color name="buram">#AACFCF</color>
 </resources>

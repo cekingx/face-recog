@@ -4,97 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".Activity.DetailActivity">
 
 
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="0dp"
-        android:layout_height="125dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/response_bg" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/foto"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="16dp"
-        android:translationY="80dp"
-        android:src="@drawable/placeholder"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:civ_border_width="2dp"
-        app:civ_border_color="@color/putih"/>
-
-    <TextView
-        android:id="@+id/nik_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="5104031307990001"
-        android:textColor="@color/putih"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/nama_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="I Dewa Gede Dirga Yasa"
-        android:textColor="@color/putih"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/nik_value"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/skor_bg"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/background"
-        app:srcCompat="@drawable/response_skor_bg" />
-
-    <TextView
-        android:id="@+id/confidence_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="90.1"
-        android:textColor="@color/putih"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/skor_bg"
-        app:layout_constraintEnd_toEndOf="@+id/skor_bg"
-        app:layout_constraintStart_toStartOf="@+id/skor_bg"
-        app:layout_constraintTop_toTopOf="@+id/skor_bg" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btm_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:itemBackground="@color/putih"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/skor_bg"
-        app:menu="@menu/bottom_nav" />
-
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btm_nav">
-
-    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

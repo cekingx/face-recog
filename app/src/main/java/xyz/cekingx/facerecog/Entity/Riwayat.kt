@@ -1,4 +1,4 @@
-package xyz.cekingx.facerecog
+package xyz.cekingx.facerecog.Entity
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

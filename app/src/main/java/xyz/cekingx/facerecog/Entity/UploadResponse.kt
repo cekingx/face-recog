@@ -1,7 +1,8 @@
-package xyz.cekingx.facerecog
+package xyz.cekingx.facerecog.Entity
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import xyz.cekingx.facerecog.Entity.Riwayat
 
 @Parcelize
 data class UploadResponse(
