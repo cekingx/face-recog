@@ -19,7 +19,7 @@ interface LoginService {
     companion object {
         operator fun invoke(): LoginService {
             return Retrofit.Builder()
-                .baseUrl("http://192.168.43.105")
+                .baseUrl("http://cekingx.xyz/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(LoginService::class.java)

@@ -1,7 +1,9 @@
 package xyz.cekingx.facerecog.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 import xyz.cekingx.facerecog.R
 
 class MainActivity : AppCompatActivity() {
@@ -10,15 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val intent = Intent(this, NikInputActivity::class.java)
-//
-//        button_nik.setOnClickListener {
-//            startActivity(intent)
-//        }
-//
-//        button_identifikasi.setOnClickListener {
-//            Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT)
-//        }
+        val nikIntent = Intent(this, NikInputActivity::class.java)
+        val identificationIntent = Intent(this, IdentificationActivity::class.java)
+
+        nik_button.setOnClickListener {
+            startActivity(nikIntent)
+        }
+
+        identification_button.setOnClickListener {
+            startActivity(identificationIntent)
+        }
     }
 }
 

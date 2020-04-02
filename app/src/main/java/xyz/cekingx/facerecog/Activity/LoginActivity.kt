@@ -1,5 +1,6 @@
 package xyz.cekingx.facerecog.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -44,8 +45,7 @@ class LoginActivity : AppCompatActivity() {
             user
         ).enqueue(object : Callback<LoginResponse> {
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                login_root.snackbar(t.message!!)
-                Log.e("error", t.message)
+                login_root.snackbar("Something went wrong")
             }
 
             override fun onResponse(
@@ -55,7 +55,11 @@ class LoginActivity : AppCompatActivity() {
                 response.body()?.let {
                     if (it.status == "200") {
                         login_root.snackbar(it.status!!)
-                        Log.d("objek", it.status)
+                        val intent = Intent(this@LoginActivity, MainActivity::class.java).apply {
+                            putExtra("USERNAME", it.petugas!!.nama)
+                        }
+
+                        startActivity(intent)
                     } else if (it.status == "403") {
                         login_root.snackbar(it.error!!)
                     } else {
