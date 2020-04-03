@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/identification_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Activity.IdentificationActivity">
 
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,11 +28,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:scrollbars="vertical"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp">
+            android:scrollbars="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,16 +45,18 @@
             <TextView
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:gravity="center"
                 android:text="Silahkan masukan foto dengan maksimal ukuran foto adalah 2MB"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                android:textColor="@color/white"
-                android:layout_marginBottom="15dp"/>
+                android:textColor="@color/white" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/foto"
                     android:layout_width="220dp"
                     android:layout_height="220dp"
                     android:src="@drawable/testimonial" />
@@ -53,11 +66,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
                 android:text="KECAMATAN"
                 android:textColor="@color/tosca"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginTop="50dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="280dp"
@@ -77,6 +90,7 @@
                 android:paddingRight="50dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/kecamatan_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/tosca"
@@ -88,9 +102,7 @@
                     android:textColor="@color/tosca"
                     android:textColorHint="@color/buram"
                     android:textCursorDrawable="@color/tosca"
-                    android:textStyle="normal"
-                    >
-                </androidx.appcompat.widget.AppCompatEditText>
+                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatEditText>
             </LinearLayout>
 
 
@@ -98,11 +110,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="TANGGAL LAHIR"
                 android:textColor="@color/tosca"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="280dp"
@@ -122,30 +134,31 @@
                 android:paddingRight="50dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tanggal_lahir_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/tosca"
                     android:gravity="center"
                     android:hint="Masukan Tanggal Lahir"
+                    android:inputType="date"
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                     android:textColor="@color/tosca"
                     android:textColorHint="@color/buram"
                     android:textCursorDrawable="@color/tosca"
-                    android:textStyle="normal"
-                    android:inputType="date">
-                </androidx.appcompat.widget.AppCompatEditText>
+                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatEditText>
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/identification_button"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:background="@color/tosca"
-                android:text="DETECTED"
-                android:textColor="@android:color/white"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="80dp"/>
+                android:layout_marginBottom="80dp"
+                android:background="@color/tosca"
+                android:text="identifikasi"
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
     </ScrollView>

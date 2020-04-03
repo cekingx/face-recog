@@ -1,4 +1,4 @@
-package xyz.cekingx.facerecog
+package xyz.cekingx.facerecog.Interface
 
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

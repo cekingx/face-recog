@@ -14,6 +14,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import xyz.cekingx.facerecog.*
 import xyz.cekingx.facerecog.Entity.UploadResponse
+import xyz.cekingx.facerecog.Interface.MyAPI
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -27,7 +28,6 @@ class NikInputActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nik_input)
 
-//        val intent = Intent(this, DetailActivity::class.java)
 
         foto.setOnClickListener {
             openImageChooser()

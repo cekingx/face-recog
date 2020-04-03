@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
-        <activity android:name=".Activity.IdentificationActivity"></activity>
+        <activity android:name=".Activity.IdentificationResultActivity"></activity>
+        <activity android:name=".Activity.IdentificationActivity" />
         <activity android:name=".Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -17,4 +17,13 @@
     <string name="riwayat_tinggal_label">Riwayat Tinggal</string>
     <string name="confidence_label">Kemiripan</string>
 
+    <string-array name="kecamatan">
+        <item>sukawat</item>
+        <item>blahbatuh</item>
+        <item>gianyar</item>
+        <item>tampaksiring</item>
+        <item>ubud</item>
+        <item>tegalallang</item>
+        <item>payangan</item>
+    </string-array>
 </resources>
