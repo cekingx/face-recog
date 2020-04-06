@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_identification.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
@@ -26,15 +27,43 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import xyz.cekingx.facerecog.Entity.IdentificationResponse
+import java.util.*
 
 class IdentificationActivity : AppCompatActivity(),
-    UploadRequestBody.UploadCallback {
+    UploadRequestBody.UploadCallback,
+    AdapterView.OnItemSelectedListener {
 
     private var selectedImageUri: Uri? = null
+    private var kecamatan: String? = null
+    private var tanggalLahir: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_identification)
+
+        /** Spinner */
+        val spinner: Spinner = findViewById(R.id.spinner)
+        spinner.onItemSelectedListener = this
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.kecamatan,
+            R.layout.custom_spinner
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinner.adapter = adapter
+        }
+
+        /** Date Picker */
+        val today = Calendar.getInstance()
+        date_picker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)
+        ) { view, year, month, day ->
+            val month = month + 1
+            tanggalLahir = "$year-$month-$day"
+        }
 
         foto.setOnClickListener {
             openImageChooser()
@@ -84,8 +113,8 @@ class IdentificationActivity : AppCompatActivity(),
 
         Log.d("test", "Here1")
 
-        val kecamatan = kecamatan_input.text.toString()
-        val tanggalLahir = tanggal_lahir_input.text.toString()
+//        val kecamatan = kecamatan_input.text.toString()
+//        val tanggalLahir = tanggal_lahir_input.text.toString()
 
         Log.d("test", "Here2")
         progress_bar.progress = 0
@@ -96,8 +125,8 @@ class IdentificationActivity : AppCompatActivity(),
                 file.name,
                 body
             ),
-            kecamatan.toRequestBody("multipart/form-data".toMediaType()),
-            tanggalLahir.toRequestBody("multipart/form-data".toMediaType())
+            kecamatan!!.toRequestBody("multipart/form-data".toMediaType()),
+            tanggalLahir!!.toRequestBody("multipart/form-data".toMediaType())
         ).enqueue(object : Callback<IdentificationResponse> {
             override fun onFailure(call: Call<IdentificationResponse>, t: Throwable) {
                 identification_root_layout.snackbar(t.message!!)
@@ -126,5 +155,13 @@ class IdentificationActivity : AppCompatActivity(),
 
     companion object {
         const val REQUEST_CODE_PICK_IMAGE = 101
+    }
+
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        kecamatan = parent!!.getItemAtPosition(position).toString()
     }
 }

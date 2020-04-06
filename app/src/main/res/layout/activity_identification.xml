@@ -89,20 +89,26 @@
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp">
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/kecamatan_input"
+<!--                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                    android:id="@+id/kecamatan_input"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:backgroundTint="@color/tosca"-->
+<!--                    android:gravity="center"-->
+<!--                    android:hint="Masukan Kecamatan"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                    android:textColor="@color/tosca"-->
+<!--                    android:textColorHint="@color/buram"-->
+<!--                    android:textCursorDrawable="@color/tosca"-->
+<!--                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatEditText>-->
+                <Spinner
+                    android:id="@+id/spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/tosca"
-                    android:gravity="center"
-                    android:hint="Masukan Kecamatan"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                    android:textColor="@color/tosca"
-                    android:textColorHint="@color/buram"
-                    android:textCursorDrawable="@color/tosca"
-                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatEditText>
+                    android:background="@color/tosca"
+                    android:paddingRight="10dp"/>
             </LinearLayout>
 
 
@@ -133,21 +139,28 @@
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp">
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/tanggal_lahir_input"
-                    android:layout_width="match_parent"
+<!--                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                    android:id="@+id/tanggal_lahir_input"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:backgroundTint="@color/tosca"-->
+<!--                    android:gravity="center"-->
+<!--                    android:hint="Masukan Tanggal Lahir"-->
+<!--                    android:inputType="date"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+<!--                    android:textColor="@color/tosca"-->
+<!--                    android:textColorHint="@color/buram"-->
+<!--                    android:textCursorDrawable="@color/tosca"-->
+<!--                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatEditText>-->
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/tosca"
-                    android:gravity="center"
-                    android:hint="Masukan Tanggal Lahir"
-                    android:inputType="date"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                    android:textColor="@color/tosca"
-                    android:textColorHint="@color/buram"
-                    android:textCursorDrawable="@color/tosca"
-                    android:textStyle="normal"></androidx.appcompat.widget.AppCompatEditText>
+                    android:background="@color/tosca"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
